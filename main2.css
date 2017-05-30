@@ -1,0 +1,462 @@
+/*
+Tabla de contenidos: 
+
+color palette:
+
+	BACKGROUND------neutral #F0F0F0"
+	FONT------------Carbon #404545;
+	HOVER-----------sky #BDDFED;
+	TITLE/ACCENT----watermelon (ish) #F45555 
+
+FONT FAMILY GROUPS: 
+
+	TITLE----------font-family: 'Open Sans', sans-serif; (TITLE)
+	BYLINE-------Font-family: 'Gentium Basic', serif; (ITALICS)
+	DECK-----------font-family: 'Open Sans', sans-serif; 
+	BODY-----------Font-family: 'Gentium Basic', serif; (BODY)
+						font-family: 'Open Sans', sans-serif; (TITLE)
+
+
+**CURRENT**:
+BODY_____font-family: 'Old Standard TT', serif;
+TITLE____font-family: 'Questrial', sans-serif;
+
+  */
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Gentium+Basic:400,700');
+
+
+body{
+	background-color: #F0F0F0;
+	color: #404545;
+	font-family:  'Old Standard TT', serif;
+	font-size: 24px;
+	font-style: normal;
+	margin: 2px;
+	padding: 0;
+	display: block;
+	text-align: justify;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+.lead{
+	padding: 50px 0 0 0;
+}
+
+.firstcharacter {
+  color: #F45555;
+  float: left;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
+
+
+.image1{
+
+	align-content: center;
+  height: auto;
+  max-width: 100%;
+  float: center;
+margin: 2px;
+	padding: 0;
+	display: block;
+	text-align: justify;
+	margin-left: auto;
+	margin-right: auto;
+ min-width: 1024px;
+/*align-content: center;
+  height: auto;
+  max-width: 1200px;
+align-content: center;*/
+}
+
+.image-body{
+align-content: center;
+  height: auto;
+  max-width: 100%;
+  float: center;
+margin: 2px;
+	padding: 0;
+	display: block;
+	text-align: justify;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.head-img {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* min-height: 100%;
+  min-width: 1024px;
+ */
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+/*   	margin-top: 50px;
+ */
+}
+
+img{
+
+ /*  -webkit- filter: grayscale(100%); */
+  filter: grayscale(100%);
+}
+.footer{
+	align-content: center;
+/* 	margin-left: auto;
+	margin-right: auto; */
+
+
+}
+.hero{
+/* 		 border: 1px solid red;*/	
+/* font-family: 'Questrial', sans-serif; */
+/* 	font-style: normal;
+	font-size: 16px; */
+	width: 1000px;
+	height: 100vh;
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+
+align-content: center;
+ max-width: 100%;
+/*  float: center;
+ */margin: 2px;
+	padding: 0;
+	display: block;
+	text-align: justify;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+/* 
+This styles the headline, deck, and byline */
+/* this is the headline */
+h1 {
+/* 	this adds stroke for definition against photo */
+text-shadow: 0px .5px .5px #404545;
+   	margin-top: 100px;
+/*    	height: 50vh;
+ */ margin-bottom: 10px;
+ margin-top: 140px;
+	color: #F45555; 
+	font-family: 'Questrial', sans-serif;
+	text-transform: uppercase;
+	font-size: 4rem;
+	font-weight: 700;
+	text-align: center;
+	max-width: 100%;
+	text-transform: uppercase;
+    line-height: 7rem;
+    padding: 0px 10px 0px 10px;
+}
+
+/* deck*/
+h2{
+	font-family:  'Old Standard TT', serif;
+	line-height: 1.5;
+	color: #404545; 
+	font-size: 2rem;
+	font-style: normal;
+	text-shadow: .2px .1px .1px black;
+	margin-top: 60px;
+	font-weight: 700;         
+}
+
+.deck{ background-color:#BDDFED;
+opacity: .85; 
+padding: 3px;
+/* margin: 1px;
+ */}
+
+/* div.background{
+			background-color:#BDDFED;
+			opacity: .85 ;
+		
+			}	
+			
+		
+div.deck {
+			font-weight:bold;
+			color:#404545;
+		} */
+			
+
+
+/* byline */
+h3{
+	text-align: left;
+/* 	padding: 1px;
+ *//* 	margin-top: 100px;
+ */	color: #F45555;
+	font-family:  'Questrial', sans-serif;
+	font-weight: bold;
+	margin-top: 80px;
+	font-size: 1.5rem;
+		text-transform: uppercase;
+		text-shadow: .5px .5px .5px #404545;
+
+}
+
+.clearfix {
+	clear: both;
+}
+
+header a {
+	color:  white;
+	text-decoration: none;
+}
+
+
+article{
+/* 	padding: 50px;
+ */	background-color: #F0F0F0;
+	color: #404545;
+	font-family:'Old Standard TT', serif;
+	font-size: 24px;
+}
+
+/* The following styles horizontal nav that is responsive */
+body {margin: 0;}
+
+ul.sidenav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #BDDFED;
+    color: #404545;
+    opacity: .85;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+       
+}
+
+ul.sidenav li a {
+    display: block;
+    color: #F45555;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+ 
+ul.sidenav li a.active {
+    background-color: #F0F0F0;
+    font-color: #F45555;
+}
+
+ul.sidenav li a:hover:not(.active) {
+    background-color: #F0F0F0;
+    color: #F45555;
+}
+
+div.content {
+    margin-left: 25%;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+@media screen and (max-width: 1300px) {
+    ul.sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    ul.sidenav li a {
+        float: left;
+        padding: 15px;
+    }
+    div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 900px) {
+h1{ 
+   	font-size: 2em;
+   	line-height:1; 
+   }
+h2{
+	font-size: 1em;
+	margin-right: 10px;
+	margin-left: 10px;
+	}
+	h3{
+		font-size:..7em; 
+	}
+	.hero{
+	margin-right: 10px;
+	margin-left: 10px;
+		}
+}
+
+@media screen and (max-width: 400px) {
+    ul.sidenav li a {
+        text-align: center;
+        float: none;
+    }
+ h1{ 
+   	font-size: 1.5em;
+   	line-height:1; 
+   }
+h2{
+	font-size: .9em;
+	margin-right: 10px;
+	margin-left: 10px;
+	}
+	h3{
+		font-size:.5em; 
+	}
+	.hero{
+	margin-right: 10px;
+	margin-left: 10px;
+		}
+}
+
+
+
+section {
+	width: 100%;
+/* 	padding: 90px 0;
+ */	/* TRouBLe */
+
+	 /* border: 1px solid red; */
+}
+
+p {
+	display: block;
+	max-width: 750px;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+aside {
+
+/* 		border: 1px solid red;
+ */		float: right;
+	    width: 25%;
+	    margin: 3em 1em 0.6em 2em;
+	    opacity: 1;
+	    border-top: 1px solid #ccc;
+
+}
+
+	a{
+	text-decoration: none;
+}
+/* 
+a:link, a:visited {
+    color: #7AD9D0;
+}
+ */
+
+ a:link {
+    color: #F45555;
+}
+
+/* visited link */
+a:visited {
+    color: #F45555;
+}
+
+/* mouse over link */
+a:hover {
+    color: #BDDFED;
+}
+
+/* selected link */
+a:active {
+    color: #F45555;
+}
+
+.sidebar-docs{
+	color: #F45555;
+
+
+
+}
+.title {
+/* 	border: 1px solid red;
+ */	color: #BDDFED;
+	font-family: 'Questrial', sans-serif;
+	font-style: normal
+	font-size: 30px;
+}
+
+.group{
+	/* font-family: 'Old Standard TT', serif; */
+	font-family: 'Questrial', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+
+}
+/* 
+This section styles pull quotes
+they will be 
+- centered
+- in font questrial (like title)
+- in accent color #FFA730
+
+ */
+blockquote {
+		color: #F45555;
+		font-family: 'Questrial', sans-serif;
+		font-size: 28px;
+		font-weight: normal;
+		width: 45%; 
+		text-align: justify;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.vid {
+	width: 50%;
+	margin-left:auto;
+	margin-right: auto;
+}
+
+
+
+
+
+ /* quote 1 centered */
+/* .quote-1{
+	float: left;
+	justify-content: center;
+	border: 1px solid red;
+}
+ */
+
+/* .inline-img{
+	min-height: 100%;
+  min-width: 1024px;
+  max-width: 100%;
+ }
+ */
+
+/* 
+#title{
+   max-width: 1300px;
+    width: 100%;
+    height: auto;
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  margin-left: auto;
+	margin-right: auto;
+} 
