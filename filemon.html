@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Audioslide de filemon</title>
+
+        <link rel="stylesheet" href="assets/css/reveal-filemon.css">
+
+
+        <link rel="stylesheet" href="assets/css/filemon.css">
+
+        <script src='assets/js/jquery.min.js'></script>
+
+    </head>
+    <body>
+        <div class="audio">
+            <audio id="entrevista" controls="controls">
+              <source src="assets/audio/filemon-final.wav" type="audio/mpeg"  >
+            </audio>
+        </div>
+        <div class="reveal">
+            <div class="slides">
+                <section class="slide-aligned-left" data-background-image="assets/fotos/matt-anderson.jpg">
+                   <h1>Buscando lo que<br>se pierde<br/>con el retorno</h1>
+                    <a href="#" class="navigate-next" id="comenzar">Comenzar</a>
+                </section>
+
+                <!-- Cada slide se cambia automáticamente utilizando segundos, en el siguiente caso, 5 segundos (expresado 5000 milisegundos) -->
+
+                <section class="slide-aligned-center" data-autoslide="3000">
+                    <p>This is a story about Filemon, he is Mexican and lives in Brooklyn, New York.</p>
+                </section>
+
+                <section class="slide-aligned-center" data-autoslide="5500">
+                    <p>Filemons is 40 years old and has lives have spent half of his life in New York.</p>
+                </section>
+
+                <section class="slide-aligned-center" data-autoslide="8200">
+                    <h2>“Well it was March 6, a Monday, and there was a meeting at the church about immigration...”</h2>
+                </section>
+
+                <section class="slide-aligned-center" data-autoslide="16500">
+                    <h2>“...and at 6 o'clock I turned on the TV in my house...”</h2>
+                    </section>
+
+                <section class="slide-aligned-center" data-autoslide="19000">
+                    <p>Televisa: A Mexican woman from Brooklyn was so worried about deportation that she decided to return voluntarily to Mexico</p>
+                 </section>
+
+                 <section class="slide-aligned-center" data-autoslide="32000">
+                    <p>“..well at least the woman decided to go, who was undocumented, with her two daughters, who are American citizens.”</p>
+                </section>
+
+                 <section class="slide-aligned-center" data-autoslide="34000">
+                    <h2>“But the husband stayed.”</h2>
+                </section>
+
+                 <section class="slide-aligned-center" data-autoslide="41000">
+                    <h3>“So what happened? It shocked me when I saw that woman because I recognized her from the area, I recognized her from church.”</h3>
+                </section>
+
+ <section class="slide-aligned-center" data-autoslide="45000">
+                    <h3>“This past November Rocío Sanchez returned to Mexico with her daughters out of fear.”</h3>
+                </section>
+ <section class="slide-aligned-center" data-autoslide="48000">
+                    <h2>“I have conflicting feelings”</h2>
+                </section>
+ <section class="slide-aligned-center" data-autoslide="56000">
+                    <h3>“I feel like its kind of a sad situation, because a lot of familes, a lot of people are dealing with the same thing”</h3>
+                </section>
+
+ <section class="slide-aligned-center" data-autoslide="70000">
+                    <p>“Well I decided to look for Rocío's husband to cheer him up becasue I figured what is happening is really hard- having half of your family here and half there, thats really sad. That's why I'd like to talk to him.”</p>
+                </section>
+ <section class="slide-aligned-center" data-autoslide="75000">
+                    <p>On January 20, while Donald Trump took office in Washington D.C., the Filemon's life changed-as did the future for thousands of other undocumented immigrants. </p>
+                </section>
+ <section class="slide-aligned-center" data-autoslide="95000">
+                    <h3>“I don't think t hey are the only ones. I think there are many families that have already gone back like that, that go voluntarily, out of fear. Its such a shame that people have to go like that, not becasue they want to, but kind of forced to. Its hard.”</h3>
+                </section>
+ <section class="slide-aligned-center" data-autoslide="105000">
+                    <p>Filemon's search continues, even if just to find the whereabouts of the Rocío Sanchez's husband-the woman who left out of fear of being deported under the Trump Administration</p>
+                </section>
+
+ <section class="slide-aligned-center" data-autoslide="">
+                    <h3>"It's sad to have someone so ready and talking like that. You have to have courage. To continue or not to keep attracting the community and speaking like he is- seperating families.”</h3>
+                </section>
+
+
+
+
+
+            </div>
+        </div>
+
+        <script src="assets/js/head.min.js"></script>
+        <script src="assets/js/reveal.js"></script>
+        <script>
+
+
+            $(document).ready(function() {
+                // Selecciono el objeto de audio.
+                var entrevista = $('#entrevista');
+                // Extraigo la duración.
+                var duracion = entrevista.prop('duration');
+                // Extraigo la posición actual del audio.
+                var posicion;
+
+                // Inicio haciendo click en el botón comenzar, para darle "Play" al audio. El slide se ejecuta vía Reveal.js, class="navigate-next"
+                $('#comenzar').on('click', function() {
+                    entrevista.trigger('play');
+                });
+
+                // Listener o evento que detecta si hubo un cambio en slide.
+                Reveal.addEventListener( 'slidechanged', function(event, setTime) {
+
+                    // Si accidentalmente me cambio de slide sin usar el botón comenzar, entonces ejecuto el audio.
+
+                    // Caso contrario, pongo el audio en pausa y lo vuelvo a cero.
+
+                    if (Reveal.getState().indexh === 0) {
+                        entrevista.trigger('pause');
+                        entrevista.prop('currentTime',0);
+                    } else {
+                        entrevista.trigger('play');
+                    }
+
+                });
+
+                entrevista.on('timeupdate', function() {
+                    posicion = Math.round(entrevista.prop('currentTime'));
+                    console.log(posicion);
+                });
+
+
+
+            });
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: false,
+                autoslide: true,
+                controls: false,
+                center: true,
+                progress: true,
+                width: "100%",
+                height: "100%"
+            });
+        </script>
+    </body>
+</html>
